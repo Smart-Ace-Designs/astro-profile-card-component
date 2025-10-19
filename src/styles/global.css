@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+@theme {
+  --color-theme-blue-600: hsl(185, 75%, 39%);
+  --color-theme-navy-950: hsl(229, 23%, 23%);
+  --color-theme-gray-500: hsl(227, 10%, 46%);
+
+  --font-kumbh-sans: "Kumbh Sans", system-ui;
+}

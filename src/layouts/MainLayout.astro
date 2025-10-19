@@ -1,5 +1,6 @@
 ---
 import "@/styles/global.css";
+import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
 
 interface Props {
@@ -16,10 +17,11 @@ const { title = "Astro", description = "An Astro website." } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <Font cssVariable="--font-kumbh-sans" preload />
     <title>{title}</title>
     <ClientRouter />
   </head>
-  <body>
+  <body class="font-kumbh-sans">
     <main>
       <slot />
     </main>
