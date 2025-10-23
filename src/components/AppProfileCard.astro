@@ -10,10 +10,8 @@ const { name, age, location } = Astro.props;
 
 <section class="w-full max-w-84 overflow-hidden rounded-2xl">
   <div class="h-32 w-full bg-[url(/bg-pattern-card.svg)]"></div>
-  <div>
-    <img src="image-victor.jpg" alt={name} />
-  </div>
   <div class="bg-white text-center">
+    <img src="image-victor.jpg" alt={name} />
     <h1 class="font-extrabold text-theme-navy-950">
       {name}
       <span class="font-normal text-theme-gray-500">{age}</span>
