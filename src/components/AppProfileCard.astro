@@ -1,34 +1,48 @@
 ---
-interface Props {
+interface Profile {
   name: string;
-  age: string;
+  age: number;
   location: string;
+  followers: string;
+  likes: string;
+  photos: string;
 }
 
-const { name, age, location } = Astro.props;
+interface Props {
+  user: Profile;
+}
+
+const { user } = Astro.props;
 ---
 
-<section class="mt-43 h-[375px] w-full max-w-[350px] overflow-hidden rounded-[15px]">
-  <div class="h-35 w-full bg-[url(/bg-pattern-card.svg)] bg-cover bg-center bg-no-repeat"></div>
-  <div class="bg-white text-center">
-    <img src="image-victor.jpg" alt={name} class="mx-auto rounded-full" />
-    <h1 class="font-extrabold text-theme-navy-950">
-      {name}
-      <span class="font-normal text-theme-gray-500">{age}</span>
+<section class="h-[375px] w-full max-w-[350px] overflow-hidden rounded-[15px]">
+  <div class="relative h-35 w-full bg-[url(/bg-pattern-card.svg)] bg-cover bg-center bg-no-repeat">
+    <img
+      src="image-victor.jpg"
+      alt={user.name}
+      class="absolute top-full left-1/2 z-1 size-26 -translate-1/2 rounded-full border-[5px] border-white"
+      width="104"
+      height="104"
+    />
+  </div>
+  <div class="bg-white pt-20 text-center">
+    <h1 class="text-lg font-black text-theme-navy-950">
+      {user.name}
+      <span class="font-normal text-theme-gray-500">{user.age}</span>
     </h1>
-    <p class="text-sm text-theme-gray-500">{location}</p>
+    <p class="text-sm text-theme-gray-500">{user.location}</p>
   </div>
   <div class="flex flex-row justify-between bg-white p-8">
     <div>
-      <p>80K</p>
+      <p>{user.followers}</p>
       <p>Followers</p>
     </div>
     <div>
-      <p>803K</p>
-      <p>Like</p>
+      <p>{user.likes}</p>
+      <p>Likes</p>
     </div>
     <div>
-      <p>1.4K</p>
+      <p>{user.photos}</p>
       <p>Photos</p>
     </div>
   </div>

@@ -1,10 +1,28 @@
 ---
 import MainLayout from "@/layouts/MainLayout.astro";
 import AppProfileCard from "@/components/AppProfileCard.astro";
+
+interface Profile {
+  name: string;
+  age: number;
+  location: string;
+  followers: string;
+  likes: string;
+  photos: string;
+}
+
+const user: Profile = {
+  name: "Victor Crest",
+  age: 26,
+  location: "London",
+  followers: "80K",
+  likes: "803K",
+  photos: "1.4K",
+};
 ---
 
 <MainLayout title="Frontend Mentor | Profile Card Component">
-  <div class="flex min-h-screen justify-center">
-    <AppProfileCard name="Victor Crest" age="26" location="London" />
+  <div class="flex min-h-screen justify-center pt-43">
+    <AppProfileCard user={user} />
   </div>
 </MainLayout>
