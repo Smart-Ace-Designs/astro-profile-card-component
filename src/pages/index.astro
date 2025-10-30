@@ -1,15 +1,7 @@
 ---
+import type { Profile } from "@/utils/Profile";
 import MainLayout from "@/layouts/MainLayout.astro";
 import AppProfileCard from "@/components/AppProfileCard.astro";
-
-interface Profile {
-  name: string;
-  age: number;
-  location: string;
-  followers: string;
-  likes: string;
-  photos: string;
-}
 
 const user: Profile = {
   name: "Victor Crest",
