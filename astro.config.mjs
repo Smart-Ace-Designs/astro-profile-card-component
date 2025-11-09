@@ -15,6 +15,7 @@ export default defineConfig({
         provider: fontProviders.google(),
         name: "Kumbh Sans",
         cssVariable: "--font-kumbh-sans",
+        weights: ["100 900"],
       },
     ],
   },
