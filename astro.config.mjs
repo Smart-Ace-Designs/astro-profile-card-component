@@ -17,7 +17,6 @@ export default defineConfig({
         cssVariable: "--font-kumbh-sans",
         weights: [400, 500, 700, 800],
         styles: ["normal"],
-        subsets: ["latin"],
       },
     ],
   },
