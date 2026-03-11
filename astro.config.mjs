@@ -8,15 +8,13 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  experimental: {
-    fonts: [
-      {
-        provider: fontProviders.google(),
-        name: "Kumbh Sans",
-        cssVariable: "--font-kumbh-sans",
-        weights: [400, 500, 700, 800],
-        styles: ["normal"],
-      },
-    ],
-  },
+  fonts: [
+    {
+      provider: fontProviders.google(),
+      name: "Kumbh Sans",
+      cssVariable: "--font-kumbh-sans",
+      weights: [400, 500, 700, 800],
+      styles: ["normal"],
+    },
+  ],
 });
