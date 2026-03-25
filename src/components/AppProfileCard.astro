@@ -6,10 +6,11 @@ interface Props {
 }
 
 const { user } = Astro.props;
+const background = `url(${import.meta.env.BASE_URL}bg-pattern-card.svg)`;
 ---
 
-<section class="h-[375px] w-full max-w-[350px] overflow-hidden rounded-[15px]">
-  <div class="relative h-35 w-full bg-[url(/bg-pattern-card.svg)] bg-cover bg-center bg-no-repeat">
+<section class="h-93.75 w-full max-w-87.5 overflow-hidden rounded-[15px]">
+  <div class="responsive-bg relative h-35 w-full bg-cover bg-center bg-no-repeat">
     <img
       src="image-victor.jpg"
       alt={user.name}
@@ -42,3 +43,9 @@ const { user } = Astro.props;
     </div>
   </div>
 </section>
+
+<style define:vars={{ background }}>
+  .responsive-bg {
+    background-image: var(--background);
+  }
+</style>
